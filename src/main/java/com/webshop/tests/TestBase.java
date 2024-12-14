@@ -52,4 +52,18 @@ public class TestBase {
         }
 
     }
+    public void logIn(){
+        click(By.cssSelector("[class='ico-login']"));
+        type(By.cssSelector("[name='Email']"), "ggvonbdoy@gmail.com");
+        type(By.cssSelector("[name='Password']"), "Iamlovekedy21$");
+        click(By.cssSelector("[value='Log in']"));
+    }
+    public boolean isStafInShoppingCart(){
+        return isElementPresent(By.cssSelector("[class='end']"));
+    }
+
+    protected void deleteStaff() {
+        click(By.cssSelector("[name='removefromcart']"));
+        click(By.cssSelector("[name='updatecart']"));
+    }
 }

@@ -13,9 +13,9 @@ public class CreateAccaunt extends  TestBase {
         Random random = new Random();
         int i = random.nextInt(1000) + 1000;
         click(By.cssSelector("[href='/register']"));
-        type(By.cssSelector("[name='FirstName']"), "Andrbey");
+        type(By.cssSelector("#FirstName"), "Andrbey");
         type(By.cssSelector("[name='LastName']"), "Bu");
-        type(By.cssSelector("[name='Email']"), "ggvonbdoy" + i + "@gmail.com");
+        type(By.cssSelector("[name='Email']"), "ggvonbdoy@gmail.com");
         type(By.cssSelector("[name='Password']"), "Iamlovekedy21$");
         type(By.cssSelector("[name='ConfirmPassword']"), "Iamlovekedy21$");
 
