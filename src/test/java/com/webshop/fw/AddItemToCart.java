@@ -1,4 +1,4 @@
-package com.webshop.tests;
+package com.webshop.fw;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;

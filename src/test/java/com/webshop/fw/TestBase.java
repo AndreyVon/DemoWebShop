@@ -1,4 +1,4 @@
-package com.webshop.tests;
+package com.webshop.fw;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
