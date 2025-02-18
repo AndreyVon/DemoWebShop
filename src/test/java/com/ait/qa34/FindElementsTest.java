@@ -37,10 +37,22 @@ public class FindElementsTest {
 
     @Test
     public void searchElements(){
-        driver.findElements(By.cssSelector("[class='inactive'] [href='/apparel-shoes']"));
-        driver.findElements(By.id("#newsletter-subscribe-button"));
-        driver.findElements(By.cssSelector("[href='/producttag/4/apparel']"));
+        driver.findElements(By.cssSelector("[class='inactive'] [href='/books']"));
+        driver.findElement(By.cssSelector("div.item-box:nth-child(2) div.buttons > *"));
+        driver.findElement(By.cssSelector("[href='/register']"));
+        driver.findElement(By.cssSelector("[value='Search']"));
+        driver.findElement(By.cssSelector("div.header-menu li [href='/computers']"));
 
+    }
+
+    @Test
+    public void searchElementXPath(){
+
+        driver.findElement(By.xpath("//*[@href='/register']"));
+        driver.findElement(By.xpath("//*[@value='Search']"));
+        driver.findElement(By.xpath("//*[@class='inactive'] //*[@href='/books']"));
+        driver.findElement(By.xpath("(//div[@class='item-box'])[1]//div[@class='buttons']/*"));
+        driver.findElement(By.xpath("//*[@class='top-menu']//*[@href='/computers']"));
     }
 
     @AfterMethod
