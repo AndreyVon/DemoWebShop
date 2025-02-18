@@ -35,6 +35,14 @@ public class FindElementsTest {
         System.out.println(span.size());
     }
 
+    @Test
+    public void searchElements(){
+        driver.findElements(By.cssSelector("[class='inactive'] [href='/apparel-shoes']"));
+        driver.findElements(By.id("#newsletter-subscribe-button"));
+        driver.findElements(By.cssSelector("[href='/producttag/4/apparel']"));
+
+    }
+
     @AfterMethod
     public void tearDown(){
         driver.quit();
