@@ -19,7 +19,7 @@ public class RegistrationTests extends TesteBase {
         type(By.id("Password"),"pampampam1213");
         type(By.id("ConfirmPassword"),"pampampam1213");
         click(By.cssSelector("[value='Register']"));
-       Assert.assertTrue(isElementPresent(By.cssSelector("[href='/logout']")));
+       Assert.assertTrue(isElementPresent(By.cssSelector("[href='/customer/info']")));
 
 
     }

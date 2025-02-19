@@ -49,4 +49,30 @@ public class TesteBase {
     public boolean isElementPresent(By locator){
         return driver.findElements(locator).size()>0;
     }
+    public void pause(int millis){
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void deleteProduct() {
+        click(By.cssSelector("td [type='checkbox']"));
+        click(By.cssSelector("[name='updatecart']"));
+    }
+
+    public void inputPassword() {
+        type(By.cssSelector("[name='Password']"),"pampampam1213");
+        click(By.cssSelector("[class='button-1 login-button']"));
+    }
+
+    public void inputEmail() {
+        click(By.cssSelector("[href='/login']"));
+        type(By.cssSelector("[class='email']"),"pampamG1356@gm.com");
+    }
+
+    public void clousedAssertInBay() {
+        click(By.cssSelector("[class='close']"));
+    }
 }
