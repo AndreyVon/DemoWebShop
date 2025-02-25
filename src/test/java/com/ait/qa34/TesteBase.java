@@ -6,15 +6,18 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.Assert;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 
 import java.time.Duration;
+import java.util.Random;
 
 public class TesteBase {
-    WebDriver driver;
+   static WebDriver driver;
 
-    @BeforeMethod
+    // @BeforeMethod
+    @BeforeSuite
     public void setUp(){
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -23,7 +26,8 @@ public class TesteBase {
 
     }
 
-    @AfterMethod(enabled = false)
+   // @AfterMethod(enabled = false)
+    @AfterSuite(enabled = false)
     public void tearDown(){
         driver.quit();
     }
@@ -64,15 +68,51 @@ public class TesteBase {
 
     public void inputPassword() {
         type(By.cssSelector("[name='Password']"),"pampampam1213");
+
+    }
+
+    public void clickInSaveLogin() {
         click(By.cssSelector("[class='button-1 login-button']"));
     }
 
     public void inputEmail() {
-        click(By.cssSelector("[href='/login']"));
+
         type(By.cssSelector("[class='email']"),"pampamG1356@gm.com");
+    }
+
+    public void clickLoginBytton() {
+        click(By.cssSelector("[href='/login']"));
     }
 
     public void clousedAssertInBay() {
         click(By.cssSelector("[class='close']"));
+    }
+
+
+
+    public void buyProduct(By locator) {
+        click(locator);
+        clousedAssertInBay();
+        pause(500);
+        click(By.cssSelector("li:nth-child(3) [class='ico-cart']"));
+        Assert.assertTrue(isElementPresent(By.cssSelector("[class='cart-item-row']")));
+    }
+
+    public void clickOnSaveRegistration() {
+        click(By.cssSelector("[value='Register']"));
+    }
+
+    public void fillAddRegisterForm(User user) {
+        Random random = new Random();
+        int i = random.nextInt(1000) + 1000;
+        type(By.id("FirstName"), user.getName());
+        type(By.id("LastName"), user.getLastName());
+        type(By.id("Email"), i + user.getEmail());
+        type(By.id("Password"), user.getPassword());
+        type(By.id("ConfirmPassword"), user.getPassword());
+    }
+
+    public void clickRegisterLink() {
+        click(By.cssSelector("[href='/register']"));
     }
 }
