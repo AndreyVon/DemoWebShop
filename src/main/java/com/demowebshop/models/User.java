@@ -1,4 +1,4 @@
-package com.ait.qa34;
+package com.demowebshop.models;
 
 public class User {
     private String name;

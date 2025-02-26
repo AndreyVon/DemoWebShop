@@ -6,15 +6,17 @@ import org.testng.annotations.Test;
 
 public class AddToCard extends TesteBase{
     @BeforeMethod
-    public void logIn(){
-        inputEmail();
-        inputPassword();
+    public void ensurePrecondition(){
+        if(!app.getUser().isLoginLinkPresent()){
+            app.getUser().clickOnSignOutButton();
+        }
+        app.getUser().logInForm();
     }
 
     @Test
     public void addToCard(){
-        buyProduct(By.cssSelector("div.item-box:nth-child(3) div.buttons > *"));
-        deleteProduct();
+        app.getProduct().buyProduct(By.cssSelector("div.item-box:nth-child(3) div.buttons > *"));
+        app.getProduct().deleteProduct();
 
 
     }
