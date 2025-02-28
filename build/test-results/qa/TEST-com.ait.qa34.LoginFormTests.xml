@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ait.qa34.LoginFormTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-02-28T07:25:52" hostname="ANDREY" time="1.916">
+  <properties/>
+  <testcase name="signInLoginNegativeTest" classname="com.ait.qa34.LoginFormTests" time="0.867"/>
+  <testcase name="signInLoginPositiveTest" classname="com.ait.qa34.LoginFormTests" time="1.041"/>
+  <system-out><![CDATA[14:25:41.558 [Test worker] INFO  com.ait.qa34.TesteBase -- Start Test signInLoginNegativeTest
+14:25:53.160 [Test worker] INFO  com.ait.qa34.TesteBase -- PASSED signInLoginNegativeTest
+14:25:53.160 [Test worker] INFO  com.ait.qa34.TesteBase -- Stop Test
+14:25:53.160 [Test worker] INFO  com.ait.qa34.TesteBase -- ============================================================
+14:25:53.161 [Test worker] INFO  com.ait.qa34.TesteBase -- Start Test signInLoginPositiveTest
+14:25:54.209 [Test worker] INFO  com.ait.qa34.TesteBase -- PASSED signInLoginPositiveTest
+14:25:54.209 [Test worker] INFO  com.ait.qa34.TesteBase -- Stop Test
+14:25:54.209 [Test worker] INFO  com.ait.qa34.TesteBase -- ============================================================
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

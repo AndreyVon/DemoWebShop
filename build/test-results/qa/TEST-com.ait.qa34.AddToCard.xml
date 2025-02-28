@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ait.qa34.AddToCard" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-02-28T07:25:39" hostname="ANDREY" time="2.372">
+  <properties/>
+  <testcase name="addToCard" classname="com.ait.qa34.AddToCard" time="2.372"/>
+  <system-out><![CDATA[14:25:37.569 [Test worker] INFO  com.ait.qa34.TesteBase -- Start Test addToCard
+14:25:41.557 [Test worker] INFO  com.ait.qa34.TesteBase -- PASSED addToCard
+14:25:41.557 [Test worker] INFO  com.ait.qa34.TesteBase -- Stop Test
+14:25:41.557 [Test worker] INFO  com.ait.qa34.TesteBase -- ============================================================
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

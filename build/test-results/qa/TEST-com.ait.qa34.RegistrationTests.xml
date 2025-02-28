@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ait.qa34.RegistrationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-02-28T07:26:04" hostname="ANDREY" time="1.661">
+  <properties/>
+  <testcase name="registrationFormPositiveTest" classname="com.ait.qa34.RegistrationTests" time="1.661"/>
+  <system-out><![CDATA[14:25:54.210 [Test worker] INFO  com.ait.qa34.TesteBase -- Start Test registrationFormPositiveTest
+14:26:06.544 [Test worker] INFO  com.ait.qa34.TesteBase -- PASSED registrationFormPositiveTest
+14:26:06.544 [Test worker] INFO  com.ait.qa34.TesteBase -- Stop Test
+14:26:06.544 [Test worker] INFO  com.ait.qa34.TesteBase -- ============================================================
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
